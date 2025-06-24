@@ -28,8 +28,8 @@ hw.snd.vpc_autoreset=0
 kern.timecounter.alloweddeviation=0
 ```
 
-*check for bitperfect output
-8
+** check for bitperfect output **
+
 ```
 sysctl hw.snd.verbose=2 
 cat /dev/sndstat
