@@ -1,0 +1,2 @@
+# FreeBSDnotes
+notes to self
