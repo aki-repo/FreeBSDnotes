@@ -1,1 +1,9 @@
+/etc/sysctl.conf
 
+```
+dev.pcm.0.bitperfect=1
+dev.pcm.1.bitperfect=1
+kern.timecounter.alloweddeviation=0
+hw.snd.maxautovchans=0
+hw.snd.latency=0
+```
