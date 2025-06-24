@@ -16,12 +16,23 @@ The mac_priority(4) module establishes permission scheduling rules so that privi
 Add the following lines to your `/etc/sysctl.conf` file:
 
 ```conf
-dev.pcm.0.bitperfect=1
-dev.pcm.1.bitperfect=1
-dev.pcm.1.play.vchans=0
-kern.timecounter.alloweddeviation=0
+# sound setup/bitperfect
+hw.snd.default_auto=0
+hw.snd.default_unit=0
 hw.snd.maxautovchans=0
+dev.pcm.0.play.vchans=0
+dev.pcm.0.bitperfect=1
 hw.snd.latency=0
+# dont autoreset vol to default
+hw.snd.vpc_autoreset=0
+kern.timecounter.alloweddeviation=0
+```
+
+*check for bitperfect output
+8
+```
+sysctl hw.snd.verbose=2 
+cat /dev/sndstat
 ```
 
 
